@@ -104,6 +104,29 @@ body {
     background-color: #fff;
   }
 
+  .table {
+    display: table;
+    width: 100%;
+    font-size: 16px;
+    color: #546778;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 0;
+    text-transform: capitalize;
+  }
+
+  td {
+    text-align: center;
+    border-top: 1px solid #cbd8e6;
+    padding: 1em 0;
+  }
+  
+  th {
+    text-align: center;
+    padding-bottom: 1.5em;
+    font-weight: bold;
+  }
+
   .button--primary {
     background-color: #4e91e4;
     color: #fff;

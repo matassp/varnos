@@ -3,9 +3,6 @@ body {
     font-family:Montserrat,Roboto,sans-serif;
 }
 
-/* Simple dashboard grid CSS */
-
-/* Assign grid instructions to our parent grid container */
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -17,20 +14,19 @@ body {
     height: 100vh;
   }
   
-  /* Give every child element its grid name */
   .header {
     grid-area: header;
-    background-color: #648ca6;
+    background-color: #546778;
   }
   
   .main {
     grid-area: main;
-    background-color: #8fd4d9;
+    background-color: #ffffff;
   }
   
   .footer {
     grid-area: footer;
-    background-color: #648ca6;
+    background-color: #546778;
   }
 
   .header, .footer {
@@ -38,13 +34,83 @@ body {
     align-items: center;
     justify-content: space-around;
     padding: 0 16px;
-    background-color: #648ca6;
+    background-color: #546778;
     opacity: .9;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .box {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #eef2f7;
+    background-color: #eef2f7;
+    color: #546778;
+  }
+
+  .field-label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+
+  .field-helper {
+    font-weight: 400;
+    font-size: 13px;
+    color: #879aab;
+    margin-top: 5px;
+  }
+
+  .input {
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .field {
+    margin-top: 1em;
+  }
+
+  .box--center {
+    margin: auto;
+    width: 50%;
+  }
+
+  .button {
+    display: inline-block;
+    transition: background-color .3s;
+    cursor: pointer;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #fff;
+  }
+
+  .button--primary {
+    background-color: #4e91e4;
+    color: #fff;
   }
 
   .menu__item {
       margin: 0 1em;
-      text-decoration: none;
       font-size: 16px;
       cursor: pointer;
       opacity: .9;
@@ -57,7 +123,7 @@ body {
     padding: 20px;
     height: auto;
     background-color: #e3e4e6;
-    color: slategray;
+    color: #dde5ee;
   }
 
   #map {

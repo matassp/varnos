@@ -6,16 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600">
     <link rel="stylesheet" href="css\styles.css">
-    <title>Varnos - Homepage</title>
+    <title>Varnos - Log In</title>
 </head>
 
 <body>
     <div class="grid-container">
         <header class="header">
             <div class="header__logo">
-                <a href="index.html">
-                    VARNOS 🐦
-                </a>
+                <a href="index.html">VARNOS 🐦</a>
             </div>
             <div class="menu">
                 <a href="login.html" class="menu__item">Log In</a>
@@ -24,7 +22,18 @@
             </div>
         </header>
         <main class="main">
-            <div id="map"></div>
+            <div class="box box--center" style="max-width: 400px; margin-top: 1em">
+                <div class="field">
+                    <div class="field-label">Email</div>
+                    <input type="text" class="input" placeholder="you@company.com">
+                </div>
+                <div class="field">
+                    <div class="field-label">Password</div>
+                    <input type="password" class="input" placeholder="password">
+                    <div class="field-helper">Password must contain at least 8 characters</div>
+                </div>
+                <div class="button button--primary" style="margin-top: 1em">Log In</div>
+            </div>
         </main>
         <footer class="footer">
             <div class="footer__copyright">&copy; 2019, Kaunas</div>

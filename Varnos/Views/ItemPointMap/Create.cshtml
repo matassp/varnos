@@ -1,0 +1,27 @@
+﻿@using Varnos
+@model Varnos.Models.ItemPointMap
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box box--center" style="max-width: 400px; margin-top: 1em">
+    <h2>Create a new point</h2>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="field">
+                <label asp-for="FkItemidItem" class="field-label"></label>
+                <select asp-for="FkItemidItem" class="input" asp-items="ViewBag.FkItemidItem"></select>
+                <span asp-validation-for="FkItemidItem" class="field-helper"></span>
+            </div>
+            <div class="field">
+                <label asp-for="Quantity" class="field-label"></label>
+                <input asp-for="Quantity" class="input"></input>
+                <span asp-validation-for="Quantity" class="field-helper"></span>
+            </div>
+            <div class="field">
+                <input type="submit" value="Create" class="button button--primary" />
+            </div>
+        </form>
+</div>

@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Varnos.Models.ItemPointMap>
+@{
+    ViewData["Title"] = "Varnos - Entries";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="box box--center" style="max-width: 1000px; margin-top: 1em;">
+<table class="table">
+    <thead>
+    <tr>
+        <th>date</th>
+        <th>region</th>
+        <th>username</th>
+        <th>type</th>
+        <th>quantity</th>
+        <th>lat</th>
+        <th>lng</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkPointidPointNavigation.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkPointidPointNavigation.FkRegionidRegionNavigation.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkPointidPointNavigation.FkUseridUserNavigation.Nickname)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkItemidItemNavigation.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkPointidPointNavigation.Latitude)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FkPointidPointNavigation.Longitude)
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+</div>

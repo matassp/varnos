@@ -1,0 +1,51 @@
+﻿@using Microsoft.AspNetCore.Http
+@using  Varnos.Areas.Admin.Controllers
+@inject IHttpContextAccessor HttpContextAccessor
+@{
+    string role = @HttpContextAccessor.HttpContext.Session.GetString("role") ?? "";
+    string totalQuantity = @HttpContextAccessor.HttpContext.Session.GetString("totalQuantity") ?? "";
+    bool isAdmin = role.Equals("admin");
+}
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:600">
+        <link rel="stylesheet" href="\css\styles.css">
+        <title>@ViewData["title"]</title>
+    </head>
+
+    <body>
+        <div class="grid-container">
+            <header class="header">
+                <div class="header__logo">
+                    <a asp-controller="Home" asp-action="Index">VARNOS 🐦</a>
+                </div>
+                <div class="menu">
+                    <if include-if="@isAdmin">
+                        <a asp-area="Admin" asp-controller="Regions" asp-action="Index" class="menu__item">Regions</a>
+                        <a asp-area="Admin" asp-controller="Users" asp-action="Index" class="menu__item">Users</a>
+                    </if>
+                    <a asp-controller="ItemPointMap" asp-action="Index" class="menu__item">Points</a>
+                    <a asp-controller="Login" asp-action="Index" class="menu__item">Log In</a>
+                    <a asp-controller="Signup" asp-action="Index" class="menu__item">Sign Up</a>
+                    <role role-name="@ViewData["role"]"></role>
+                </div>
+            </header>
+            <main class="main">
+                @RenderBody()
+            </main>
+            <footer class="footer">
+                <div class="footer__copyright">&copy; 2019, Kaunas</div>
+                <div>@totalQuantity</div>
+                <div class="footer__signature">Made with love by Matas</div>
+            </footer>
+        </div>
+        <script async defer
+                src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAB02a4-Ck5KylPIVozcHJ63C-d7DmtCto&callback=initMap"
+                type="text/javascript"></script>
+    </body>
+
+</html>

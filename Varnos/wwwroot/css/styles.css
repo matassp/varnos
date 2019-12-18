@@ -1,0 +1,151 @@
+﻿body {
+    margin: 0;
+    font-family: Montserrat,Roboto,sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 100px;
+    grid-template-areas: "header" "main" "footer";
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #546778;
+}
+
+.main {
+    grid-area: main;
+    background-color: #ffffff;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #546778;
+}
+
+.header, .footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 16px;
+    background-color: #546778;
+    opacity: .9;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.box {
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #eef2f7;
+    background-color: #eef2f7;
+    color: #546778;
+}
+
+.field-label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.field-helper {
+    font-weight: 400;
+    font-size: 13px;
+    color: #879aab;
+    margin-top: 5px;
+}
+
+.input {
+    height: 34px;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: 400;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.field {
+    margin-top: 1em;
+}
+
+.box--center {
+    margin: auto;
+    width: 50%;
+}
+
+.button {
+    display: inline-block;
+    transition: background-color .3s;
+    cursor: pointer;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border: 0;
+    background-color: #fff;
+}
+
+.table {
+    display: table;
+    width: 100%;
+    font-size: 16px;
+    color: #546778;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-width: 0;
+    text-transform: capitalize;
+}
+
+td {
+    text-align: center;
+    border-top: 1px solid #cbd8e6;
+    padding: 1em 0;
+}
+
+th {
+    text-align: center;
+    padding-bottom: 1.5em;
+    font-weight: bold;
+}
+
+.button--primary {
+    background-color: #4e91e4;
+    color: #fff;
+}
+
+.menu__item {
+    margin: 0 1em;
+    font-size: 16px;
+    cursor: pointer;
+    opacity: .9;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    height: auto;
+    background-color: #e3e4e6;
+    color: #dde5ee;
+}
+
+#map {
+    height: 100%;
+}
